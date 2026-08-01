@@ -7,6 +7,7 @@ import {
   GraduationCap, Briefcase, Sparkles, ArrowRight, Send, MapPin, Calendar,
   ChevronRight, BookOpen, Trophy, ExternalLinkIcon, Atom
 } from "lucide-react";
+import profileImage from "./assets/profile.jpg";
 
 /* =========================================================================
    DATA — edit these arrays to update site content. No markup changes needed.
@@ -87,8 +88,7 @@ const PROJECTS = [
     description: "A supervised learning model exploring predictive relationships in chemical or environmental datasets, covering preprocessing, feature engineering, model evaluation, and interpretation.",
     tech: ["Python", "Scikit-learn", "Pandas", "Seaborn"],
     icon: BrainCircuit,
-    github: "#", // TODO
-    demo: "#",   // TODO
+    
   },
   {
     title: "Personal Portfolio Website",
@@ -141,12 +141,11 @@ const BLOG_POSTS = [
 
 // Your social/contact links — replace the "#" and mailto placeholders below.
 const SOCIALS = [
-  { icon: Github, href: "#", label: "GitHub" },       // TODO: e.g. "https://github.com/your-username"
-  { icon: Linkedin, href: "#", label: "LinkedIn" },     // TODO: e.g. "https://linkedin.com/in/your-name"
-  { icon: Facebook, href: "#", label: "Facebook" },     // TODO
-  { icon: Instagram, href: "#", label: "Instagram" },   // TODO
-  { icon: Twitter, href: "#", label: "X (Twitter)" },   // TODO
-  { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }, // TODO: replace with your real email
+  { icon: Github, href: "https://github.com/Wekesah", label: "GitHub" },   
+  { icon: Linkedin, href: "https://www.linkedin.com/in/Wekesa-ezra", label: "LinkedIn" },     
+  { icon: Facebook, href: "https://www.facebook.com/Wekesa039", label: "Facebook" },     
+  { icon: Instagram, href: "https://www.instagram.com/code.hub.tech", label: "Instagram" },   
+  { icon: Mail, href: "mailto:your.wekesaezra683@gmail.com", label: "Email" }, 
 ];
 
 const NAV_LINKS = [
@@ -431,11 +430,12 @@ function Hero({ t, isDark }) {
             <span className={`absolute top-1/2 -right-1.5 -translate-y-1/2 w-2.5 h-2.5 rounded-full ${t.accentBg} opacity-70`} />
           </motion.div>
 
-          <div className={`absolute inset-10 rounded-full overflow-hidden border-2 ${t.cardBorder} shadow-2xl bg-gradient-to-br ${t.gradient} flex items-center justify-center`}>
-            <div className="text-center text-white/90">
-              <FlaskConical size={40} className="mx-auto mb-2 opacity-90" />
-              <span className="font-mono text-xs tracking-wide">Profile Photo</span>
-            </div>
+         <div className={`absolute inset-10 rounded-full overflow-hidden border-2 ${t.cardBorder} shadow-2xl`}>
+            <img
+              src={profileImage}
+              alt="Wekesa Ezra"
+              className="w-full h-full object-cover"
+            />
           </div>
         </motion.div>
       </div>
@@ -639,7 +639,6 @@ function Experience({ t }) {
 /* =========================================================================
    PROJECTS
    ========================================================================= */
-
 function ProjectCard({ project, t, index }) {
   const Icon = project.icon;
   return (
@@ -663,11 +662,8 @@ function ProjectCard({ project, t, index }) {
             ))}
           </div>
           <div className="flex gap-3 mt-auto">
-            <a href={project.github} target="_blank" rel="noreferrer" className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border ${t.border} ${t.text} hover:${t.accentSoft} transition-colors`}>
+            <a href={project.github} target="_blank" rel="noreferrer" className={`w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border ${t.border} ${t.text} hover:${t.accentSoft} transition-colors`}>
               <Github size={15} /> GitHub
-            </a>
-            <a href={project.demo} target="_blank" rel="noreferrer" className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium text-white bg-gradient-to-r ${t.gradient}`}>
-              <ExternalLink size={15} /> Live Demo
             </a>
           </div>
         </div>
@@ -690,7 +686,6 @@ function Projects({ t }) {
     </section>
   );
 }
-
 /* =========================================================================
    CERTIFICATIONS
    ========================================================================= */
