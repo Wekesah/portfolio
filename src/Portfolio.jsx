@@ -11,7 +11,7 @@ import profileImage from "./assets/profile.jpg";
 import dataScienceCert from "./assets/intro-AI.pdf";
 import aiCert from "./assets/intro-data.pdf";
 import attachmentReport from "./assets/attachment-report.pdf";
- b2q
+ 
 /* =========================================================================
    DATA — edit these arrays to update site content. No markup changes needed.
    ========================================================================= */
