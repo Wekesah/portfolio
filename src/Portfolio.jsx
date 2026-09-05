@@ -8,7 +8,10 @@ import {
   ChevronRight, BookOpen, Trophy, ExternalLinkIcon, Atom
 } from "lucide-react";
 import profileImage from "./assets/profile.jpg";
-
+import dataScienceCert from "./assets/intro-AI.pdf";
+import aiCert from "./assets/intro-data.pdf";
+import attachmentReport from "./assets/attachment-report.pdf";
+ b2q
 /* =========================================================================
    DATA — edit these arrays to update site content. No markup changes needed.
    ========================================================================= */
@@ -60,6 +63,7 @@ const EXPERIENCE = [
       "Performed moisture determination on sugar samples for quality assurance.",
       "Supported laboratory quality control procedures, ensuring accuracy and consistency of analytical results.",
     ],
+        reportUrl: attachmentReport,
   },
 ];
 
@@ -119,12 +123,9 @@ const PROJECTS = [
 // Add a fileUrl to each certificate once you have hosted PDF copies (e.g. in
 // your project's /public folder or a cloud link) to make Download buttons work.
 const CERTIFICATIONS = [
-  { title: "Python for Data Science", issuer: "Online Specialization", year: "2024", fileUrl: "#" },
-  { title: "Introduction to Machine Learning", issuer: "Online Specialization", year: "2024", fileUrl: "#" },
-  { title: "SQL for Data Analysis", issuer: "Online Specialization", year: "2023", fileUrl: "#" },
-  { title: "Laboratory Safety & Quality Control", issuer: "Nzoia Sugar Company", year: "2024", fileUrl: "#" },
+  { title: "Introduction to Data Science", issuer: "JKUAT — Instructor: Dennis Kaburu", year: "2025", fileUrl: dataScienceCert },
+  { title: "Introduction to Modern AI", issuer: "Networking Academy — Instructor: Lynn Bloomer", year: "2025", fileUrl: aiCert },
 ];
-
 const ACHIEVEMENTS = [
   { title: "Completed Industrial Attachment", detail: "6-month attachment at Nzoia Sugar Company with distinction in laboratory practice.", icon: Trophy },
   { title: "Top of Class — Instrumental Analysis", detail: "Recognized for outstanding performance in instrumental analytical methods.", icon: Award },
@@ -629,6 +630,14 @@ function Experience({ t }) {
                 </li>
               ))}
             </ul>
+            <a            
+              href={e.reportUrl}
+              target="_blank"
+              rel="noreferrer"
+              className={`mt-5 inline-flex items-center gap-2 text-sm font-medium ${t.accent} hover:underline`}
+            >
+              <BookOpen size={15} /> View Full Attachment Report <ChevronRight size={14} />
+            </a>
           </TimelineItem>
         ))}
       </div>
@@ -695,18 +704,18 @@ function Certifications({ t }) {
     <section id="certifications" className={`py-28 px-6 ${t.bgAlt}`}>
       <div className="max-w-6xl mx-auto">
         <SectionHeading eyebrow="06 — Certifications" title="Credentials on file" t={t} />
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
           {CERTIFICATIONS.map((c, i) => (
             <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp} custom={i}>
-              <GlassCard t={t} className="p-6 h-full flex flex-col">
-                <Award size={22} className={`mb-3 ${t.accent}`} />
-                <h3 className={`font-semibold text-sm mb-1 ${t.text}`}>{c.title}</h3>
-                <p className={`text-xs mb-1 ${t.textMuted}`}>{c.issuer}</p>
-                <p className={`text-xs font-mono mb-4 ${t.textFaint}`}>{c.year}</p>
+              <GlassCard t={t} className="p-7 h-full flex flex-col">
+                <Award size={26} className={`mb-4 ${t.accent}`} />
+                <h3 className={`font-semibold text-base mb-1.5 ${t.text}`}>{c.title}</h3>
+                <p className={`text-sm mb-1.5 ${t.textMuted}`}>{c.issuer}</p>
+                <p className={`text-xs font-mono mb-5 ${t.textFaint}`}>{c.year}</p>
                 <a
                   href={c.fileUrl}
                   download
-                  className={`mt-auto inline-flex items-center justify-center gap-2 px-3 py-2 rounded-xl text-xs font-medium border ${t.border} ${t.text} hover:${t.accentSoft} transition-colors`}
+                  className={`mt-auto inline-flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-medium border ${t.border} ${t.text} hover:${t.accentSoft} transition-colors`}
                 >
                   <Download size={13} /> Download
                 </a>
@@ -718,7 +727,6 @@ function Certifications({ t }) {
     </section>
   );
 }
-
 /* =========================================================================
    ACHIEVEMENTS
    ========================================================================= */
