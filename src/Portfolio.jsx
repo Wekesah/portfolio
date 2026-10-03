@@ -11,6 +11,7 @@ import profileImage from "./assets/profile.jpg";
 import dataScienceCert from "./assets/intro-AI.pdf";
 import aiCert from "./assets/intro-data.pdf";
 import attachmentReport from "./assets/attachment-report.pdf";
+import pythonCert from "./assets/python-essentials-1.pdf";
  
 /* =========================================================================
    DATA — edit these arrays to update site content. No markup changes needed.
@@ -125,6 +126,7 @@ const PROJECTS = [
 const CERTIFICATIONS = [
   { title: "Introduction to Data Science", issuer: "JKUAT — Instructor: Dennis Kaburu", year: "2025", fileUrl: dataScienceCert },
   { title: "Introduction to Modern AI", issuer: "Networking Academy — Instructor: Lynn Bloomer", year: "2025", fileUrl: aiCert },
+  { title: "Python Essentials 1", issuer: "Networking Academy — Instructor: Lynn Bloomer", year: "2026", fileUrl: pythonCert, },
 ];
 const ACHIEVEMENTS = [
   { title: "Completed Industrial Attachment", detail: "6-month attachment at Nzoia Sugar Company with distinction in laboratory practice.", icon: Trophy },
@@ -704,7 +706,7 @@ function Certifications({ t }) {
     <section id="certifications" className={`py-28 px-6 ${t.bgAlt}`}>
       <div className="max-w-6xl mx-auto">
         <SectionHeading eyebrow="06 — Certifications" title="Credentials on file" t={t} />
-        <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {CERTIFICATIONS.map((c, i) => (
             <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={fadeUp} custom={i}>
               <GlassCard t={t} className="p-7 h-full flex flex-col">
