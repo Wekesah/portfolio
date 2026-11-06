@@ -1,16 +1,309 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wekesa Ezra — Analytical Chemistry Student & Data Scientist</title>
-    <meta
-      name="description"
-      content="Portfolio of Wekesa Ezra — Analytical Chemistry student, Python developer, and aspiring Data Scientist."
-    />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wekesa Ezra — Analytical Chemistry Student &amp; Data Scientist</title>
+  <meta name="description" content="Portfolio of Wekesa Ezra — Analytical Chemistry student, Python developer, and aspiring Data Scientist." />
+  <link rel="icon" href="data:,">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-badge">We</span>
+        Wekesa Ezra
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+          <svg id="sunIcon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg id="moonIcon" class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="icon-btn mobile-only" id="menuToggle" aria-label="Toggle menu">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section id="home" class="hero">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+
+      <div class="hero-inner reveal">
+        <div class="hero-text">
+          <div class="pill">
+            <span class="spin-slow">⚛</span> open to data science &amp; research roles
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Wekesa Ezra</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Analytical Chemistry Student · Python Developer · ML Enthusiast · Future Data Scientist
+          </p>
+
+          <p class="hero-desc">
+            I sit at the intersection of the wet lab and the command line — trained to measure the world
+            precisely as a chemist, driven to model it intelligently as a developer. I'm building a career
+            around solving real scientific and industrial problems with data.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View Projects →</a>
+            <a href="assets/resume.pdf" download class="btn btn-outline">Download CV</a>
+            <a href="#contact" class="btn btn-ghost">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="orbit orbit-1"><span class="orbit-dot"></span></div>
+          <div class="orbit orbit-2"><span class="orbit-dot orbit-dot-2"></span></div>
+          <div class="photo-frame">
+            <img src="assets/profile.jpg" alt="Wekesa Ezra" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="eyebrow reveal">01 — About</div>
+        <h2 class="section-title reveal">From the titration bench to the terminal</h2>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              My foundation is in <strong>Analytical Chemistry</strong> — measuring the world with precision.
+              Through my degree at JKUAT and an industrial attachment, I've run hundreds of instrumental
+              analyses and learned that data is only useful if it's trustworthy.
+            </p>
+            <p>
+              I taught myself <strong>Python</strong> to speed up my own analysis — that curiosity grew into
+              a real interest in <strong>chemometrics</strong> and predictive modeling applied to chemical data.
+            </p>
+            <p>
+              My goal: a <strong>Data Scientist role at the intersection of chemistry and technology</strong> —
+              industrial QC, pharma, or environmental monitoring — turning raw lab data into decisions people trust.
+            </p>
+          </div>
+
+          <div class="stats-grid reveal">
+            <div class="stat-card"><div class="stat-value">4+</div><div class="stat-label">Years in Chemistry</div></div>
+            <div class="stat-card"><div class="stat-value">500+</div><div class="stat-label">Lab Analyses</div></div>
+            <div class="stat-card"><div class="stat-value">10+</div><div class="stat-label">Python Projects</div></div>
+            <div class="stat-card"><div class="stat-value">3</div><div class="stat-label">Certifications</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="eyebrow reveal">02 — Periodic Table of Skills</div>
+        <h2 class="section-title reveal">Elements of my practice</h2>
+
+        <div class="skills-grid" id="skillsGrid"><!-- populated by JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section id="education" class="section">
+      <div class="container container-narrow">
+        <div class="eyebrow reveal">03 — Education</div>
+        <h2 class="section-title reveal">Academic foundation</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-icon">🎓</span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <h3>B.Sc. Analytical Chemistry</h3>
+                <span class="timeline-date">2023 — 2027</span>
+              </div>
+              <p class="timeline-sub">Jomo Kenyatta University of Agriculture and Technology (JKUAT)</p>
+              <div class="tag-row">
+                <span class="tag">Instrumental Analysis</span>
+                <span class="tag">Quantitative Analysis</span>
+                <span class="tag">Chemometrics</span>
+                <span class="tag">Physical Chemistry</span>
+                <span class="tag">Statistics for Analytical Chemists</span>
+                <span class="tag">Organic Chemistry</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <span class="timeline-icon">🎓</span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <h3>Certificate in Python for Data Science</h3>
+                <span class="timeline-date">6 Months, 2025</span>
+              </div>
+              <p class="timeline-sub">Self-directed / Online Specialization</p>
+              <div class="tag-row">
+                <span class="tag">NumPy &amp; Pandas</span>
+                <span class="tag">Data Visualization</span>
+                <span class="tag">Scikit-learn</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal last">
+            <span class="timeline-icon">🎓</span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <h3>High School</h3>
+                <span class="timeline-date">2019 — 2022</span>
+              </div>
+              <p class="timeline-sub">Kenya Certificate of Secondary Education</p>
+              <div class="tag-row">
+                <span class="tag">Chemistry</span>
+                <span class="tag">Mathematics</span>
+                <span class="tag">Physics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section section-alt">
+      <div class="container container-narrow">
+        <div class="eyebrow reveal">04 — Experience</div>
+        <h2 class="section-title reveal">Inside the laboratory</h2>
+
+        <div class="timeline">
+          <div class="timeline-item reveal last">
+            <span class="timeline-icon">💼</span>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <h3>Industrial Attachment — Laboratory Analyst</h3>
+                <span class="timeline-date">2 Months, 2026</span>
+              </div>
+              <p class="timeline-sub">Nzoia Sugar Company</p>
+              <ul class="point-list">
+                <li>Water and boiler water analysis to ensure process safety compliance.</li>
+                <li>Juice, massecuite, and molasses analysis to monitor production efficiency.</li>
+                <li>Conductivity testing, pH determination, and Brix measurement.</li>
+                <li>Pol determination and purity calculations for sucrose content.</li>
+                <li>Moisture determination and lab quality control procedures.</li>
+              </ul>
+              <a href="assets/attachment-report.pdf" target="_blank" rel="noreferrer" class="link-arrow">
+                View Full Attachment Report →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="eyebrow reveal">05 — Projects</div>
+        <h2 class="section-title reveal">Selected work</h2>
+
+        <div class="projects-grid" id="projectsGrid"><!-- populated by JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="eyebrow reveal">06 — Certifications</div>
+        <h2 class="section-title reveal">Credentials on file</h2>
+
+        <div class="certs-grid" id="certsGrid"><!-- populated by JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <div class="container container-contact">
+        <div class="eyebrow reveal">07 — Contact</div>
+        <h2 class="section-title reveal">Let's build something precise</h2>
+
+        <div class="contact-grid">
+          <div class="contact-text reveal">
+            <p>Whether it's a research collaboration, a data science opportunity, or just a question about chemistry and code — reach out directly or find me on any of these platforms.</p>
+            <div class="social-row" id="socialRow"><!-- populated by JS --></div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-row">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="email" name="email" placeholder="Your email" required>
+            </div>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">Send Message</button>
+            <p class="form-success" id="formSuccess" style="display:none">Thanks — I'll get back to you shortly.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#home" class="logo">
+        <span class="logo-badge">We</span>
+        Wekesa Ezra
+      </a>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-row" id="footerSocialRow"><!-- populated by JS --></div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Wekesa Ezra. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
