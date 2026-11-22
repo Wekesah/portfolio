@@ -21,11 +21,12 @@ const SKILLS = [
 // GitHub repo links. "demo" adds a Live Demo button.
 const PROJECTS = [
   {
-    title: "Chemistry Data Analysis with Python",
-    description: "A Python pipeline that cleans, analyzes, and visualizes analytical chemistry datasets — titration curves, calibration models, and QC trend charts.",
-    tech: ["Python", "Pandas", "Matplotlib", "NumPy"],
+    title: "Analytical Chemistry Toolkit",
+    description: "A web app with everyday lab calculations: calibration curves with R², LOD and LOQ, titration equivalence-point detection, and QC control charts that flag out-of-control runs. Upload a CSV or try the built-in sample data.",
+    tech: ["Python", "Pandas", "SciPy", "Streamlit"],
     icon: "🧪",
-    github: "#",
+    github: "https://github.com/Wekesah/analytical-chemistry-toolkit",
+    demo: "https://analytical-chemistry-toolkit.streamlit.app/",
   },
   {
     title: "Molecular Solubility Predictor",
@@ -44,7 +45,6 @@ const PROJECTS = [
     demo: "https://wekesah.github.io/portfolio/",
   },
 ];
-
 
 // fileUrl points at a PDF in /assets — drop your certificate files there.
 const CERTIFICATIONS = [
