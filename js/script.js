@@ -18,7 +18,7 @@ const SKILLS = [
   { symbol: "Ps", name: "Problem Solving", level: 94, icon: "🧩" },
 ];
 
-// GitHub repo links — replace "#" with your real repo URLs.
+// GitHub repo links. "demo" adds a Live Demo button.
 const PROJECTS = [
   {
     title: "Chemistry Data Analysis with Python",
@@ -28,34 +28,23 @@ const PROJECTS = [
     github: "#",
   },
   {
-    title: "Machine Learning Prediction Model",
-    description: "A supervised learning model exploring predictive relationships in chemical or environmental datasets — preprocessing, feature engineering, evaluation.",
-    tech: ["Python", "Scikit-learn", "Pandas", "Seaborn"],
+    title: "Molecular Solubility Predictor",
+    description: "A web app that predicts the aqueous solubility (logS) of a molecule from its SMILES string. Compares Ridge, Random Forest and Gradient Boosting on the ESOL dataset; Gradient Boosting performed best (R² 0.885, RMSE 0.736). Includes batch CSV predictions.",
+    tech: ["Python", "RDKit", "Scikit-learn", "Streamlit"],
     icon: "🧠",
-    github: "#",
+    github: "https://github.com/Wekesah/solubility-predictor",
+    demo: "https://solubility-predictor039.streamlit.app/",
   },
   {
     title: "Personal Portfolio Website",
     description: "This site — a responsive, animated portfolio built to present my work in chemistry and data science.",
     tech: ["HTML", "CSS", "JavaScript"],
     icon: "💻",
-    github: "#",
-  },
-  {
-    title: "Shopify E-commerce Store",
-    description: "A fully configured Shopify storefront covering product catalog setup, theme customization, and checkout flow.",
-    tech: ["Shopify", "Liquid", "JavaScript"],
-    icon: "🛒",
-    github: "#",
-  },
-  {
-    title: "Future Research Project",
-    description: "An upcoming research initiative bridging analytical chemistry and machine learning — predictive modeling on spectroscopic data.",
-    tech: ["Python", "Research", "Chemometrics"],
-    icon: "✨",
-    github: "#",
+    github: "https://github.com/Wekesah/portfolio",
+    demo: "https://wekesah.github.io/portfolio/",
   },
 ];
+
 
 // fileUrl points at a PDF in /assets — drop your certificate files there.
 const CERTIFICATIONS = [
@@ -64,36 +53,32 @@ const CERTIFICATIONS = [
   { title: "Python Essentials 1", issuer: "Networking Academy — Instructor: Lynn Bloomer", year: "2026", fileUrl: "assets/python-essentials-1.pdf" },
 ];
 
-// Your social links.
+// Your social links — replace the "#"/mailto placeholders below.
 const SOCIALS = [
   { icon: "gh", href: "https://github.com/Wekesah", label: "GitHub" },
   { icon: "li", href: "https://www.linkedin.com/in/Wekesa-ezra", label: "LinkedIn" },
   { icon: "fb", href: "https://www.facebook.com/Wekesa039", label: "Facebook" },
-  { icon: "ig", href: "https://www.instagram.com/Chem2Data", label: "Instagram" },
-  { icon: "x", href: "https://x.com/WekesaEzra", label: "X (Twitter)" },
+  { icon: "ig", href: "https://www.instagram.com/W.e.k.e.s.a.h", label: "Instagram" },
+  { icon: "x", href: "https://x.com/Wekesa039", label: "X" },
   { icon: "mail", href: "mailto:wekesaezra683@gmail.com", label: "Email" },
-  { icon: "phone", href: "tel:+254795303275", label: "Call" },
-  { icon: "whatsapp", href: "https://wa.me/254795303275", label: "WhatsApp" },
 ];
 
 const SOCIAL_SVG = {
-  gh: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>',
-  li: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>',
-  fb: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>',
-  ig: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>',
-  x: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
-  mail: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
-  phone: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>',
-  whatsapp: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35ZM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.82 9.82 0 0 1 7 2.9 9.82 9.82 0 0 1 2.9 6.99c0 5.45-4.44 9.88-9.89 9.88ZM20.52 3.45A11.8 11.8 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42Z"/></svg>',
+  gh: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.1 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.78 1.2 1.78 1.2 1.03 1.78 2.72 1.26 3.38.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.09-.12-.3-.52-1.49.11-3.1 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.61.24 2.8.12 3.1.74.8 1.18 1.83 1.18 3.09 0 4.43-2.69 5.41-5.26 5.69.42.36.78 1.08.78 2.18v3.24c0 .3.2.66.79.55A10.52 10.52 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>',
+  li: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>',
+  fb: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12Z"/></svg>',
+  ig: '<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.74 3.74 0 0 1-1.38-.9 3.74 3.74 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.98c-3.15 0-3.5.01-4.73.07-1.01.05-1.56.22-1.92.36-.48.19-.83.41-1.2.78-.37.37-.6.72-.78 1.2-.14.36-.31.91-.36 1.92-.06 1.23-.07 1.58-.07 4.73s.01 3.5.07 4.73c.05 1.01.22 1.56.36 1.92.19.48.41.83.78 1.2.37.37.72.6 1.2.78.36.14.91.31 1.92.36 1.23.06 1.58.07 4.73.07s3.5-.01 4.73-.07c1.01-.05 1.56-.22 1.92-.36.48-.19.83-.41 1.2-.78.37-.37.6-.72.78-1.2.14-.36.31-.91.36-1.92.06-1.23.07-1.58.07-4.73s-.01-3.5-.07-4.73c-.05-1.01-.22-1.56-.36-1.92a3.19 3.19 0 0 0-.78-1.2 3.19 3.19 0 0 0-1.2-.78c-.36-.14-.91-.31-1.92-.36-1.23-.06-1.58-.07-4.73-.07Zm0 3.38a5.48 5.48 0 1 1 0 10.96 5.48 5.48 0 0 1 0-10.96Zm0 9.04a3.56 3.56 0 1 0 0-7.12 3.56 3.56 0 0 0 0 7.12Zm6.97-9.26a1.28 1.28 0 1 1-2.56 0 1.28 1.28 0 0 1 2.56 0Z"/></svg>',
+  x: '<svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M18.9 2H22l-7.6 8.68L23.3 22h-7.1l-5.6-7.1L4.2 22H1.1l8.1-9.3L.7 2h7.2l5.1 6.5L18.9 2Zm-1.2 18h1.7L6.4 3.9H4.6L17.7 20Z"/></svg>',
+  mail: '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>',
 };
 
 /* ==========================================================================
    THEME — persisted via localStorage
    ========================================================================== */
 const root = document.documentElement;
-const themeToggle = document.getElementById ('themeToggle');
-const sunIcon = document.getElementById ('sunIcon');
-const moonIcon = document.getElementById ('moonIcon');
+const themeToggle = document.getElementById('themeToggle');
+const sunIcon = document.getElementById('sunIcon');
+const moonIcon = document.getElementById('moonIcon');
 
 function applyTheme(theme) {
   root.setAttribute('data-theme', theme);
@@ -156,7 +141,10 @@ function renderProjects() {
         <h3>${p.title}</h3>
         <p>${p.description}</p>
         <div class="project-tech">${p.tech.map(t => `<span class="tag">${t}</span>`).join('')}</div>
-        <a href="${p.github}" target="_blank" rel="noreferrer" class="project-link">GitHub</a>
+        <div class="project-links">
+          <a href="${p.github}" target="_blank" rel="noreferrer" class="project-link">GitHub</a>
+          ${p.demo ? `<a href="${p.demo}" target="_blank" rel="noreferrer" class="project-link project-link-primary">Live Demo ↗</a>` : ''}
+        </div>
       </div>
     </div>
   `).join('');
@@ -211,38 +199,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 /* ==========================================================================
-   CONTACT FORM — sends messages to your inbox via Formspree
+   CONTACT FORM (client-side only — wire up a real backend/service to send)
    ========================================================================== */
-const FORM_ENDPOINT = "https://formspree.io/f/xaeodnnp";
-
 const form = document.getElementById('contactForm');
 const successMsg = document.getElementById('formSuccess');
-const submitBtn = document.getElementById('submitBtn');
-
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending...';
-
-  try {
-    const response = await fetch(FORM_ENDPOINT, {
-      method: 'POST',
-      body: new FormData(form),
-      headers: { 'Accept': 'application/json' },
-    });
-
-    if (response.ok) {
-      successMsg.textContent = "Thanks — I'll get back to you shortly.";
-      form.reset();
-    } else {
-      successMsg.textContent = "Something went wrong. Please email me directly.";
-    }
-  } catch (error) {
-    successMsg.textContent = "Network error. Please try again or email me directly.";
-  }
-
   successMsg.style.display = 'block';
-  submitBtn.disabled = false;
-  submitBtn.textContent = 'Send Message';
-  setTimeout(() => { successMsg.style.display = 'none'; }, 5000);
+  form.reset();
+  setTimeout(() => { successMsg.style.display = 'none'; }, 3500);
 });
