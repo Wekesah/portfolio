@@ -20,9 +20,9 @@ const SKILLS = [
 
 // GitHub repo links. "demo" adds a Live Demo button.
 const PROJECTS = [
-  {
+    {
     title: "Analytical Chemistry Toolkit",
-    description: "A web app with everyday lab calculations: calibration curves with R², LOD and LOQ, titration equivalence-point detection, and QC control charts that flag out-of-control runs. Upload a CSV or try the built-in sample data.",
+    description: "A seven-tool web app for everyday lab calculations: calibration curves with LOD/LOQ, titration equivalence points, QC control charts, replicate statistics with outlier tests, dilution and solution prep, standard addition, and sugar Brix/Pol/purity. Upload a CSV or try the sample data.",
     tech: ["Python", "Pandas", "SciPy", "Streamlit"],
     icon: "🧪",
     github: "https://github.com/Wekesah/analytical-chemistry-toolkit",
